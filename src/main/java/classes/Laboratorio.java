@@ -24,7 +24,7 @@ public class Laboratorio extends Control<Double>{
         return this.fecha;
     }
 
-    protected void agregarPorLaboratorio(List<Control> controlesLaboratorio){
-        controlesLaboratorio.add(this);
-    };
+    protected boolean isLaboratorio(){
+        return true;
+    }
 }

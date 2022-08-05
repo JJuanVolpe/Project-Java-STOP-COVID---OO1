@@ -7,7 +7,7 @@ import java.util.List;
 public class Pcr extends Control<Boolean>{
 
 
-    Pcr(LocalDate fecha, Boolean resultado){
+    public Pcr(LocalDate fecha, Boolean resultado){
         super(fecha, resultado);
 
     }
@@ -30,7 +30,8 @@ public class Pcr extends Control<Boolean>{
     protected void agregarPorPcr(List<Control> controlesPcr){
         controlesPcr.add(this);
     };
-
-
+    protected boolean isPcr(){
+        return true;
+    };
 
 }

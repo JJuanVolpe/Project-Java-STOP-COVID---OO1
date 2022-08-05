@@ -27,4 +27,5 @@ public class Clinico extends Control<Boolean>{
         controlesClinicos.add(this);
     };
 
+    protected boolean isClinico(){ return true;};
 }

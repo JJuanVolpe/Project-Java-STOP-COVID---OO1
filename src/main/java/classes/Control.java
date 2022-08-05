@@ -1,6 +1,7 @@
 package classes;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 public abstract class Control<T> {
@@ -15,12 +16,12 @@ public abstract class Control<T> {
                 ", resultado=" + resultado.toString();
     }
 
-    public Control(LocalDate fecha, T dato){
+    public Control(LocalDate fecha, T dato) {
         this.fecha = fecha;
         this.resultado = dato;
     }
 
-    public  T getResult() {
+    public T getResult() {
         return null;
     }
 
@@ -28,8 +29,18 @@ public abstract class Control<T> {
 
     abstract LocalDate getFecha();
 
-    protected void agregarPorPcr(List<Control> controlesPcr){};
-    protected void agregarPorClinico(List<Control> controlesClinico){};
-    protected void agregarPorLaboratorio(List<Control> controlesLaboratorio){};
+    protected boolean isLaboratorio(){
+        return false;
+    };
+    protected boolean isClinico(){
+        return false;
+    };
+    protected boolean isPcr(){
+        return false;
+    };
+
+    protected boolean passedAWeek(LocalDate otherDate) {
+        return ChronoUnit.DAYS.between(this.getFecha(), otherDate) >= 7;
+    }
 
 }

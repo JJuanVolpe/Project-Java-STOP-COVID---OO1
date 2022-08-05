@@ -9,3 +9,5 @@ del mismo. Los Pacientes contienen Voluntarios en orden al azar x grupo.
 Se utiliza, ademas una clase auxiliar, "SystemAvg" para permitir generalizar
 calculos de estadisticas que se deseen agregar a priori.
 
+
+requires org.junit.jupiter.api v 53.0;

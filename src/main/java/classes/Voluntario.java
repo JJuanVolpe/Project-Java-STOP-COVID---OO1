@@ -1,7 +1,20 @@
 package classes;
 
+import java.util.Objects;
+
 public class Voluntario {
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;                                 //si this es nulo se rompe?
+        if (o == null || getClass() != o.getClass()) return false;  //Esto esta mal?
+        Voluntario v = (Voluntario) o;
+        return this.getId().equals(v.getId());
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
     public Voluntario(String nombre, String dni, String sexo, int edad, String id){
         this.setId(id);
         this.setNombre(nombre);
@@ -12,8 +25,7 @@ public class Voluntario {
 
     @Override
     public String toString() {
-        return "Voluntario" +
-                "nombre='" + nombre + '\'' +
+        return  "nombre='" + nombre + '\'' +
                 ", dni='" + dni + '\'' +
                 ", sexo='" + sexo + '\'' +
                 ", id='" + id + '\'' +

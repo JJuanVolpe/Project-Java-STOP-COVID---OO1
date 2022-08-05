@@ -4,73 +4,60 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Paciente {
+public class Paciente extends Voluntario{
 
-    private Voluntario voluntario;
     private List<Control> controles;
+
     public Paciente(Voluntario voluntario) {
-        this.voluntario = voluntario;
+        super(voluntario.getNombre(), voluntario.getDni(), voluntario.getSexo(), voluntario.getEdad(), voluntario.getId());
         this.controles = new ArrayList<>();
     }
-
-
     private String getControlesToString() {
-        if (this.controles == null || this.controles.isEmpty())
+        if (this.controles.isEmpty())
             return "-";
-        return controles.stream().map(Control::toString).collect((Collectors.joining("\n")));
+        return controles.stream().map(Control::toString).collect((Collectors.joining("\t")));
+    }
+
+    public String getLastControlResult() {
+        if (this.controles.isEmpty())
+            return "-";
+        return "Resultado: " + controles.get(this.controles.size()-1).getResult().toString();
     }
 
 
     public List<Control> getControles(){ return this.controles;}
 
-    public void setControles(List<Control> controles){ this.controles = controles;}
-
-    public void realizarControl(Control control) {
-        if (this.getSinSintomasPositivos()) {
+    public void agregarControl(Control control) {
+        if (!this.poseePcrPositivo() && addByTimeOfControl(control)){
             this.controles.add(control);
         }
     }
 
-    public void ralizarControl(Control c) {
-        this.controles.add(c);
-    }
-
-
-    public boolean poseePcrPositivo(){
-        List<Control> controls = new ArrayList<>();
-        this.controles.forEach(c -> c.agregarPorPcr(controls));
-        return controls.stream().anyMatch(Control::isPositive);
-    }
-
-    public boolean poseeLaboratorioPositivo(){
-        List<Control> controls = new ArrayList<>();
-        this.controles.forEach(c -> c.agregarPorLaboratorio(controls));
-        return controls.stream().anyMatch(Control::isPositive);
-    }
-
+    private boolean addByTimeOfControl(Control c){
+        return  this.getControles().isEmpty() || this.getControles().get(getControles().size() - 1).passedAWeek(c.getFecha());
+    };
     public boolean poseeClinicoPositivo(){
-        List<Control> controls = new ArrayList<>();
-        this.controles.forEach(c -> c.agregarPorClinico(controls));
-        return controls.stream().anyMatch(Control::isPositive);
+        return this.controles.stream().filter(Control::isClinico).anyMatch(Control::isPositive);
     }
-    public boolean getSinSintomasPositivos() {
-
-        if (this.controles != null) {       //Note : If the stream is empty then true is returned and the predicate is not evaluated.
-            return true;                   //Es decir si no posee controles se considera que no tiene sintomas positivos y se realiza opera con el correspondiente...
-        }
-        return this.controles.stream().noneMatch(Control::isPositive);
+    public boolean poseePcrPositivo(){
+        return this.controles.stream().filter(Control::isPcr).anyMatch(Control::isPositive);
+    }
+    public boolean poseeControlLaboratorio() {
+        return this.controles.stream().anyMatch(Control::isLaboratorio);
     }
 
-    public boolean getByAge(int minus, int plus) {
-        return this.voluntario.getByAge(minus, plus);
+
+    public boolean noTieneControlesPositivos() {
+        //Note : If the stream is empty then true is returned and the predicate is not evaluated.
+        //Es decir si no posee controles se considera que no tiene sintomas positivos y se realiza opera con el correspondiente...
+        return this.controles.stream().noneMatch(Control::isPositive);  //Devuelve si no hay positivo
     }
 
     public List<Control> getControlsByLab(boolean firstWeeks) {
-        List<Control> controls = new ArrayList<>();
-        this.controles.forEach(c -> c.agregarPorLaboratorio(controls));
-        if (firstWeeks){
+        List<Control> controls = this.controles.stream().filter(Control::isLaboratorio).toList();
+        if (!controls.isEmpty() && firstWeeks){
             while (controls.size() > 3){  //Elimina los controles por laboratorio para que solamente queden los 3 primeros.
-                controls.remove(controls.size());
+                controls.remove(controls.size() - 1);
             }
         }
     return controls;
@@ -78,14 +65,8 @@ public class Paciente {
 
     @Override
     public String toString() {
-        return "Paciente{" +
-                "voluntario=" + voluntario.toString() +
-                ", controles=" + getControlesToString();
+        return  super.toString() +
+                ", controles:" + getControlesToString();
     }
 
-    public boolean poseeControlLaboratorio() {
-        List<Control> controls = new ArrayList<>();
-        this.controles.forEach(c -> c.agregarPorClinico(controls));
-        return !controls.isEmpty();
-    }
 }
