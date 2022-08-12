@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b664e2c-a379-48f8-9ced-e0e451a1f002" name="Changes" comment="added README.txt, and adding other unitary tests">
-      <change afterPath="$PROJECT_DIR$/src/test/java/StadisticsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utilDataClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Clinico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Clinico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Control.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Ensayo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Ensayo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Laboratorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Laboratorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Paciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Paciente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Pcr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Pcr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Voluntario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Voluntario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/systemAvg/SystemAvg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/systemAvg/SystemAvg.java" afterDir="false" />
+    <list default="true" id="6b664e2c-a379-48f8-9ced-e0e451a1f002" name="Changes" comment="Created all tests except study tests.">
       <change beforePath="$PROJECT_DIR$/src/test/java/ControlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ControlTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659712913286</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Created all tests except study tests.">
+      <created>1660310977991</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660310977991</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -177,7 +173,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finished main prograam/design" />
     <MESSAGE value="added README.txt, and adding other unitary tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="added README.txt, and adding other unitary tests" />
+    <MESSAGE value="Created all tests except study tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created all tests except study tests." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
