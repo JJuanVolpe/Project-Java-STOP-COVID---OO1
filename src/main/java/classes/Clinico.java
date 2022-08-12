@@ -10,17 +10,8 @@ public class Clinico extends Control<Boolean>{
     }
 
     @Override
-    boolean isPositive() {
+    public boolean isPositive() {
         return this.resultado;
-    }
-
-    @Override
-    public Boolean getResult() {
-        return this.resultado;
-    }
-    @Override
-    LocalDate getFecha() {
-        return this.fecha;
     }
 
     protected void agregarPorClinico(List<Control> controlesClinicos){

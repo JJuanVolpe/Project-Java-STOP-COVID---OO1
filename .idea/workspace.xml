@@ -4,19 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b664e2c-a379-48f8-9ced-e0e451a1f002" name="Changes" comment="added README.txt">
+    <list default="true" id="6b664e2c-a379-48f8-9ced-e0e451a1f002" name="Changes" comment="added README.txt, and adding other unitary tests">
+      <change afterPath="$PROJECT_DIR$/src/test/java/StadisticsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilDataClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/README.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/classes/Clinico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Clinico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/classes/Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Control.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/classes/Ensayo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Ensayo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Estudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Estudio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/classes/Laboratorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Laboratorio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/classes/Paciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Paciente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/classes/Pcr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Pcr.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/classes/Voluntario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Voluntario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/classes/systemAvg/SystemAvg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/systemAvg/SystemAvg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/classesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/classesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ControlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ControlTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,24 +63,11 @@
       <recent name="C:\Users\juan\IdeaProjects\OOI-Proyect-StopCovid\src\main\java" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Estudio" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="classes.Estudio" />
-      <module name="OOI-Proyect-StopCovid" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="classes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SystemTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ControlTest.testingTimeToAddControls">
+    <configuration name="ControlTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="OOI-Proyect-StopCovid" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SystemTest" />
+      <option name="MAIN_CLASS_NAME" value="ControlTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -88,11 +75,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SystemTest.operandoConControles" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ControlTest.testingTimeToAddControls" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="OOI-Proyect-StopCovid" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SystemTest" />
-      <option name="METHOD_NAME" value="operandoConControles" />
+      <option name="MAIN_CLASS_NAME" value="ControlTest" />
+      <option name="METHOD_NAME" value="testingTimeToAddControls" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -100,24 +87,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SystemTest.testInformarResultadoControl" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="EnsayoTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="OOI-Proyect-StopCovid" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SystemTest" />
-      <option name="METHOD_NAME" value="testInformarResultadoControl" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="EnsayoTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SystemTest.testRealizarControlGrupoVacuna" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="StadisticsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="OOI-Proyect-StopCovid" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SystemTest" />
-      <option name="METHOD_NAME" value="testRealizarControlGrupoVacuna" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="StadisticsTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VoluntarioTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="OOI-Proyect-StopCovid" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VoluntarioTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -126,11 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SystemTest.operandoConControles" />
-        <item itemvalue="TestNG.SystemTest.testRealizarControlGrupoVacuna" />
-        <item itemvalue="TestNG.SystemTest" />
-        <item itemvalue="Application.Estudio" />
-        <item itemvalue="TestNG.SystemTest.testInformarResultadoControl" />
+        <item itemvalue="TestNG.ControlTest.testingTimeToAddControls" />
+        <item itemvalue="TestNG.ControlTest" />
+        <item itemvalue="TestNG.VoluntarioTest" />
+        <item itemvalue="TestNG.EnsayoTest" />
+        <item itemvalue="TestNG.StadisticsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -157,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659019153209</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added README.txt, and adding other unitary tests">
+      <created>1659712913286</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659712913286</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,6 +176,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finished main prograam/design" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished main prograam/design" />
+    <MESSAGE value="added README.txt, and adding other unitary tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added README.txt, and adding other unitary tests" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/classes/systemAvg/SystemAvg.java</url>
+          <line>22</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

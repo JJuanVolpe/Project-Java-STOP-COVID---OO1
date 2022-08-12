@@ -82,6 +82,6 @@ public class Voluntario {
 
 
     public boolean getByAge(int minus, int plus) {
-        return this.getEdad()  <= plus && this.getEdad()  >= minus;
+        return this.getEdad() >= minus && this.getEdad() <= plus;
     }
 }

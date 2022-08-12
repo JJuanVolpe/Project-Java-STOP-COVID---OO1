@@ -6,6 +6,14 @@ import java.util.List;
 
 public abstract class Control<T> {
 
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
+    public T getResultado() {
+        return resultado;
+    }
+
     protected LocalDate fecha;
     protected T resultado;
 
@@ -21,25 +29,13 @@ public abstract class Control<T> {
         this.resultado = dato;
     }
 
-    public T getResult() {
-        return null;
-    }
 
-    abstract boolean isPositive();
+    public abstract boolean isPositive();
+    protected boolean isLaboratorio(){return false;}
+    protected boolean isClinico(){return false;}
+    protected boolean isPcr(){return false;}
 
-    abstract LocalDate getFecha();
-
-    protected boolean isLaboratorio(){
-        return false;
-    };
-    protected boolean isClinico(){
-        return false;
-    };
-    protected boolean isPcr(){
-        return false;
-    };
-
-    protected boolean passedAWeek(LocalDate otherDate) {
+    public boolean passedAWeek(LocalDate otherDate) {
         return ChronoUnit.DAYS.between(this.getFecha(), otherDate) >= 7;
     }
 

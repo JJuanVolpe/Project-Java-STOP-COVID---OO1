@@ -12,6 +12,11 @@ public class Paciente extends Voluntario{
         super(voluntario.getNombre(), voluntario.getDni(), voluntario.getSexo(), voluntario.getEdad(), voluntario.getId());
         this.controles = new ArrayList<>();
     }
+    public Paciente(String name, String dni, String m, int edad, String id) {
+        super(name, dni, m, edad, id);
+        this.controles = new ArrayList<>();
+    }
+
     private String getControlesToString() {
         if (this.controles.isEmpty())
             return "-";
@@ -21,7 +26,7 @@ public class Paciente extends Voluntario{
     public String getLastControlResult() {
         if (this.controles.isEmpty())
             return "-";
-        return "Resultado: " + controles.get(this.controles.size()-1).getResult().toString();
+        return "Resultado: " + controles.get(this.controles.size()-1).getResultado().toString();
     }
 
 
@@ -53,11 +58,11 @@ public class Paciente extends Voluntario{
         return this.controles.stream().noneMatch(Control::isPositive);  //Devuelve si no hay positivo
     }
 
-    public List<Control> getControlsByLab(boolean firstWeeks) {
-        List<Control> controls = this.controles.stream().filter(Control::isLaboratorio).toList();
-        if (!controls.isEmpty() && firstWeeks){
+    public List<Control> getControlsLabByTime(boolean OnlyFirstWeeks) {
+        List<Control> controls = new ArrayList<>(this.controles.stream().filter(Control::isLaboratorio).toList());
+        if (!controls.isEmpty() && OnlyFirstWeeks){
             while (controls.size() > 3){  //Elimina los controles por laboratorio para que solamente queden los 3 primeros.
-                controls.remove(controls.size() - 1);
+                controls.remove((controls.size() - 1));
             }
         }
     return controls;

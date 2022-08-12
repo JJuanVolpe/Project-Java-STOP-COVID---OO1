@@ -9,21 +9,9 @@ public class Laboratorio extends Control<Double>{
     }
 
     @Override
-    public Double getResult() {
-        return this.resultado;
-    }
-
-    @Override
-     boolean isPositive() {
+     public boolean isPositive() {
         return false;
     }
-
-
-    @Override
-    LocalDate getFecha() {
-        return this.fecha;
-    }
-
     protected boolean isLaboratorio(){
         return true;
     }

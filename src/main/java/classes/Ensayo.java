@@ -41,7 +41,6 @@ public class Ensayo {
         } else{
             this.getVoluntarios().add(new Voluntario(v.getNombre(), v.getDni(), v.getSexo(), v.getEdad(), v.getId()));
         }
-        System.out.println(this.getVoluntarios().stream().map(Voluntario::getNombre).collect(Collectors.toList()));
     }
 
     // Inciso 2: inicio de estudio

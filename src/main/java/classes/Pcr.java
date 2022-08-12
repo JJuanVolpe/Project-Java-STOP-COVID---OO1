@@ -5,28 +5,14 @@ import java.util.List;
 
 
 public class Pcr extends Control<Boolean>{
-
-
     public Pcr(LocalDate fecha, Boolean resultado){
         super(fecha, resultado);
-
     }
 
     @Override
-    boolean isPositive() {
+    public boolean isPositive() {
         return this.resultado;
     }
-
-    @Override
-    public Boolean getResult() {
-        return this.resultado;
-    }
-
-    @Override
-    LocalDate getFecha() {
-        return this.fecha;
-    }
-
     protected void agregarPorPcr(List<Control> controlesPcr){
         controlesPcr.add(this);
     };
