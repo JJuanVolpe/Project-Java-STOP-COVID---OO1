@@ -26,7 +26,7 @@ public class Paciente extends Voluntario{
     public String getLastControlResult() {
         if (this.controles.isEmpty())
             return "-";
-        return "Resultado: " + controles.get(this.controles.size()-1).getResultado().toString();
+        return controles.get(this.controles.size()-1).getResultado().toString();
     }
 
 

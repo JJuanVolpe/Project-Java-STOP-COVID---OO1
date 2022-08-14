@@ -3,10 +3,9 @@ package classes;
 import classes.systemAvg.SystemAvg;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 public class Ensayo {
-
     private Estudio estudio;
     private Set<Voluntario> voluntarios = new HashSet<>();
 
@@ -55,7 +54,10 @@ public class Ensayo {
     // Inciso 6: Porcentaje de integrantes de ese grupo con Control Clínico positivo divididos en tres rangos de edades
     public void reportarSintomas() {
         if (this.getEstudio() != null) {
-            SystemAvg.getAvgByAgeAndClinico(this.getEstudio().getAllVoluntarios());
+            List<Double> stats = SystemAvg.getAvgByAgeAndClinico(this.getEstudio().getAllVoluntarios());
+            System.out.println("promedio edades 18-40:" + stats.get(0) +
+                               "\npromedio edades 41-60:" + stats.get(1) +
+                               "\npromedio edad > 60:" + stats.get(0));
         } else {
             System.out.println("No se ha creado estudio todavia");
         }
@@ -64,7 +66,10 @@ public class Ensayo {
     // Inciso 7: Reportamos los Suspendidos por Pcr Positivo
     public void reportarSuspendidos() {
         if (this.getEstudio() != null) {
-            SystemAvg.getAvgByAgeAndPcr(this.getEstudio().getAllVoluntarios());
+            List<Double> stats = SystemAvg.getAvgByAgeAndPcr(this.getEstudio().getAllVoluntarios());
+            System.out.println("promedio edades 18-40:" + stats.get(0) +
+                                "\npromedio edades 41-60:" + stats.get(1) +
+                                "\npromedio edad > 60:" + stats.get(0));
         } else {
             System.out.println("No se ha creado estudio todavia");
         }
@@ -73,7 +78,9 @@ public class Ensayo {
     // Inciso 8: Reportamos promedio de cantidad anticuerpos generados por 3 o 6 semanas
     public void reporteGrupoVacuna() {
         if (this.getEstudio() != null) {
-            SystemAvg.getAvgByWeeks(this.getEstudio().getVacuna());
+            List<Double> stats = SystemAvg.getAvgByWeeks(this.getEstudio().getVacuna());
+            System.out.println("Promedio Total en Tres semanas:" + stats.get(0) +
+                               "\nPromedio Total en Seis semanas:" + stats.get(1));
         } else {
             System.out.println("No se ha creado estudio todavia");
         }

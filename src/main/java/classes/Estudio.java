@@ -56,7 +56,7 @@ public class Estudio {
     }
 
     private void suspenderConSintomas(List<Paciente> list){
-        List<Paciente> listToErase = new ArrayList<>(10);
+        List<Paciente> listToErase = new ArrayList<>(list.size());
         listToErase.addAll(list.stream().filter(Paciente::poseePcrPositivo).toList());
         listToErase.forEach(p -> {
             System.out.println("Lo sentimos ha sido suspendido por detección de control PCR positivo:" + p.getNombre());
@@ -86,7 +86,7 @@ public class Estudio {
     }
     //Inciso 5. Informar resultado de control.
     public void informarResultadoControl() {
-        List<Paciente> list =  this.getVacuna();
+        List<Paciente> list =  new ArrayList<>(this.getVacuna());
         list.addAll(this.getPlacebo());
         list.forEach(Paciente::getLastControlResult);
         this.suspenderConSintomas(list);
