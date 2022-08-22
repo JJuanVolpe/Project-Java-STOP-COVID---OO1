@@ -7,25 +7,27 @@ import org.testng.annotations.Test;
 
 import java.time.LocalDate;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 public class PacienteTest {
 
     @Test
     public void realizarControlPaciente(){
         Paciente p = new Paciente("Jose", "M", "12", 20, "0019");
         p.agregarControl(new ControlClinico(LocalDate.now(), false));
-        Assert.assertTrue(p.noTieneControlesPositivos());
-        Assert.assertEquals(1, p.getControles().size());
+        assertTrue(p.noTieneControlesPositivos());
+        assertEquals(1, p.getControles().size());
 
         p.agregarControl(new ControlClinico(LocalDate.now().plusWeeks(1), true));
-        Assert.assertFalse(p.noTieneControlesPositivos());
+        assertFalse(p.noTieneControlesPositivos());
     }
 
     @Test
     public void getControlsByWeeks(){
         Paciente p = new Paciente("Jose", "M", "12", 20, "0019");
         addLabControls(p);
-        Assert.assertEquals(3, p.getControlsLabByTime(true).size());
-        Assert.assertEquals(6, p.getControlsLabByTime(false).size());
+        assertEquals(3, p.getControlsLabByTime(true).size());
+        assertEquals(6, p.getControlsLabByTime(false).size());
     }
 
     @Test
@@ -33,9 +35,9 @@ public class PacienteTest {
         Paciente p = new Paciente("Jose", "M", "12", 20, "0019");
         addLabControls(p);
         p.agregarControl(new ControlClinico(LocalDate.now().plusWeeks(0), false));
-        Assert.assertTrue(p.noTieneControlesPositivos());
+        assertTrue(p.noTieneControlesPositivos());
         p.agregarControl(new ControlClinico(LocalDate.now().plusWeeks(6), true));
-        Assert.assertFalse(p.noTieneControlesPositivos());
+        assertFalse(p.noTieneControlesPositivos());
     }
 
     @Test
@@ -43,9 +45,9 @@ public class PacienteTest {
         Paciente p = new Paciente("Jose", "M", "12", 20, "0019");
         addLabControls(p);
         p.agregarControl(new ControlPcr(LocalDate.now().plusWeeks(6), true));
-        Assert.assertTrue(p.poseePcrPositivo());
-        Assert.assertFalse(p.poseeClinicoPositivo());
-        Assert.assertTrue(p.poseeControlLaboratorio());
+        assertTrue(p.poseePcrPositivo());
+        assertFalse(p.poseeClinicoPositivo());
+        assertTrue(p.poseeControlLaboratorio());
     }
 
     private void addLabControls(Paciente p) {
