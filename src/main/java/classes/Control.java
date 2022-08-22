@@ -2,7 +2,6 @@ package classes;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-import java.util.List;
 
 public abstract class Control<T> {
 
@@ -28,7 +27,6 @@ public abstract class Control<T> {
         this.fecha = fecha;
         this.resultado = dato;
     }
-
 
     public abstract boolean isPositive();
     protected boolean isLaboratorio(){return false;}

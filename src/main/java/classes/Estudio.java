@@ -2,7 +2,6 @@ package classes;
 
 import java.time.LocalDate;
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Estudio {
@@ -14,6 +13,12 @@ public class Estudio {
     private List<Paciente> placebo;
     private List<Paciente> suspendidos; //Mutuamente excluyente de  (Placebo o Vacuna)
 
+    public Estudio(){
+        this.fechaInicio = LocalDate.now();
+        this.vacuna = new ArrayList<>();
+        this.placebo = new ArrayList<>();
+        this.suspendidos = new ArrayList<>();
+    }
     public Estudio(Set<Voluntario> voluntarios) {
         this.fechaInicio = LocalDate.now();
         this.vacuna = new ArrayList<>(voluntarios.size() / 2);
@@ -25,9 +30,7 @@ public class Estudio {
         return fechaInoculacion;
     }
 
-    public List<Paciente> getVacuna() {
-        return vacuna;
-    }
+    public List<Paciente> getVacuna() {return vacuna;}
 
     public List<Paciente> getPlacebo() {
         return placebo;
@@ -41,23 +44,17 @@ public class Estudio {
         this.fechaInoculacion = LocalDate.now();
     }
     private void generarGrupoPlaceboYVacuna(Set<Voluntario> set) {
-
         List<Voluntario> list = new ArrayList<>(set);
-        int midIndex = (list.size() - 1) / 2;
+        int midIndex = list.size() / 2;
 
-        List<List<Voluntario>> lists = new ArrayList<>(
-                list.stream()
-                        .collect(Collectors.partitioningBy(s -> list.indexOf(s) > midIndex))
-                        .values()
-        );
-        lists.get(0).forEach(v -> this.vacuna.add((new Paciente(v))));
-        lists.get(1).forEach(v -> this.placebo.add((new Paciente(v))));
-
+        this.vacuna = new ArrayList<>(list.subList(0, midIndex).stream().map(Paciente::new).toList());
+        this.placebo = new ArrayList<>(list.subList(midIndex , list.size()).stream().map(Paciente::new).toList());
     }
 
     private void suspenderConSintomas(List<Paciente> list){
-        List<Paciente> listToErase = new ArrayList<>(list.size());
-        listToErase.addAll(list.stream().filter(Paciente::poseePcrPositivo).toList());
+        List<Paciente> listToErase = new ArrayList<>(list.stream()
+                                                    .filter(Paciente::poseePcrPositivo)
+                                                    .toList());
         listToErase.forEach(p -> {
             System.out.println("Lo sentimos ha sido suspendido por detección de control PCR positivo:" + p.getNombre());
             this.suspendidos.add(p);
@@ -86,14 +83,14 @@ public class Estudio {
     }
     //Inciso 5. Informar resultado de control.
     public void informarResultadoControl() {
-        List<Paciente> list =  new ArrayList<>(this.getVacuna());
-        list.addAll(this.getPlacebo());
-        list.forEach(Paciente::getLastControlResult);
+        List<Paciente> list =  new ArrayList<>(Stream.concat(this.getPlacebo().stream(), this.getVacuna().stream())
+                                                .toList());
+        list.forEach(p -> System.out.println(p.getLastControlResult()));
         this.suspenderConSintomas(list);
     }
     public List<Paciente> getAllVoluntarios() {
         return Stream.of(this.getVacuna(), this.getPlacebo(), this.getSuspendidos())
                 .flatMap(Collection::stream)
-                .collect(Collectors.toList());
+                .toList();
     }
 }

@@ -4,16 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b664e2c-a379-48f8-9ced-e0e451a1f002" name="Changes" comment="modified Control Test  added new assert">
-      <change afterPath="$PROJECT_DIR$/src/test/java/PacienteTest.java" afterDir="false" />
+    <list default="true" id="6b664e2c-a379-48f8-9ced-e0e451a1f002" name="Changes" comment="Finished all tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/exercise_data/ejercicio.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exercise_data/requeriments.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Clinico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/ControlClinico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Control.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/classes/Ensayo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Ensayo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/classes/Estudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Estudio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Laboratorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/ControlLaboratorio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/classes/Paciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/Paciente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/classes/Pcr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/ControlPcr.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/classes/systemAvg/SystemAvg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classes/systemAvg/SystemAvg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ControlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ControlTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/EstudioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EstudioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PacienteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PacienteTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StadisticsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StadisticsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SystemTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilDataClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilDataClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +34,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="UML Sequence" />
       </list>
     </option>
   </component>
@@ -41,15 +52,18 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Sequence&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/juan/IdeaProjects/OOI-Proyect-StopCovid/src/main/java/exercise_data&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -57,14 +71,15 @@
       <recent name="classes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\juan\IdeaProjects\OOI-Proyect-StopCovid\src\main\java\exercise_data" />
       <recent name="C:\Users\juan\IdeaProjects\OOI-Proyect-StopCovid\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.VoluntarioTest">
-    <configuration name="EnsayoTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.&lt;default&gt;">
+    <configuration name="ControlTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="OOI-Proyect-StopCovid" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="EnsayoTest" />
+      <option name="MAIN_CLASS_NAME" value="ControlTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -72,22 +87,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EstudioTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ControlTest.testingTimeToAddControls" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="OOI-Proyect-StopCovid" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="EstudioTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PacienteTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="OOI-Proyect-StopCovid" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PacienteTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="ControlTest" />
+      <option name="METHOD_NAME" value="testingTimeToAddControls" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -116,13 +121,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="OOI-Proyect-StopCovid" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.VoluntarioTest" />
+        <item itemvalue="TestNG.&lt;default&gt;" />
         <item itemvalue="TestNG.StadisticsTest" />
-        <item itemvalue="TestNG.PacienteTest" />
-        <item itemvalue="TestNG.EstudioTest" />
-        <item itemvalue="TestNG.EnsayoTest" />
+        <item itemvalue="TestNG.ControlTest" />
+        <item itemvalue="TestNG.ControlTest.testingTimeToAddControls" />
+        <item itemvalue="TestNG.VoluntarioTest" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660311453190</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Finished all tests">
+      <created>1660481927266</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1660481927266</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,17 +211,7 @@
     <MESSAGE value="added README.txt, and adding other unitary tests" />
     <MESSAGE value="Created all tests except study tests." />
     <MESSAGE value="modified Control Test  added new assert" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified Control Test  added new assert" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/classes/Estudio.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Finished all tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished all tests" />
   </component>
 </project>

@@ -23,13 +23,13 @@ public class EstudioTest {
     }
     @Test
     public void hacerControlGrupoPlacebo(){
-        estudio.realizarControlGrupoPlacebo(estudio.getPlacebo().get(0), new Clinico(LocalDate.now(), true));
+        estudio.realizarControlGrupoPlacebo(estudio.getPlacebo().get(0), new ControlClinico(LocalDate.now(), true));
         Assert.assertEquals(1, estudio.getPlacebo().get(0).getControles().size()); // 1 control agregado
 
-        estudio.realizarControlGrupoPlacebo(estudio.getPlacebo().get(0), new Laboratorio(LocalDate.now(), 28d));
+        estudio.realizarControlGrupoPlacebo(estudio.getPlacebo().get(0), new ControlLaboratorio(LocalDate.now(), 28d));
         Assert.assertEquals(1, estudio.getPlacebo().get(0).getControles().size()); //Grupo Placebo no debe tener controles por Laboratorio
 
-        estudio.realizarControlGrupoPlacebo(estudio.getVacuna().get(0), new Clinico(LocalDate.now(), true));
+        estudio.realizarControlGrupoPlacebo(estudio.getVacuna().get(0), new ControlClinico(LocalDate.now(), true));
         Assert.assertEquals(1, estudio.getPlacebo().get(0).getControles().size()); // 1 control agregado
     }
 
@@ -40,23 +40,23 @@ public class EstudioTest {
         Assert.assertEquals(10, study.getAllVoluntarios().size());
         Assert.assertEquals(0, study.getSuspendidos().size());
 
-        study.realizarControlGrupoPlacebo(study.getPlacebo().get(0), new Pcr(LocalDate.now(), true));
-        study.realizarControlGrupoVacuna(study.getVacuna().get(1), new Pcr(LocalDate.now(), true));
+        study.realizarControlGrupoPlacebo(study.getPlacebo().get(0), new ControlPcr(LocalDate.now(), true));
+        study.realizarControlGrupoVacuna(study.getVacuna().get(1), new ControlPcr(LocalDate.now(), true));
+        study.realizarControlGrupoVacuna(study.getVacuna().get(2), new ControlPcr(LocalDate.now(), false));
 
         study.informarResultadoControl(); //Detecta PCR positivos y los reporta
-        Assert.assertEquals(2, study.getSuspendidos().size());
+        Assert.assertEquals(2, study.getSuspendidos().size());  //2 pcr positivos equivale a 2 suspendidos luego del informe de resultados.
         Assert.assertEquals(4, study.getVacuna().size());
         Assert.assertEquals(4,study.getPlacebo().size());
         Assert.assertEquals(10, study.getAllVoluntarios().size());
-
     }
 
     @BeforeAll
-     void beforeAll(){
+     static void beforeAll(){
         System.out.println("Inicializando Test  de Estudio");
     }
     @AfterAll
-     void afterAll(){
+     static void afterAll(){
         System.out.println("Finalizando Test  de Estudio");
     }
 }

@@ -1,5 +1,5 @@
-import classes.Clinico;
-import classes.Laboratorio;
+import classes.ControlClinico;
+import classes.ControlLaboratorio;
 import classes.Paciente;
 import classes.Voluntario;
 import java.time.LocalDate;
@@ -41,29 +41,27 @@ public class utilDataClass {
     }
 
     public static void generarControlesGrupoVacuna(List<Paciente> pacientes) {
-        pacientes.get(0).agregarControl(new Laboratorio(LocalDate.now(), 1d));
-        pacientes.get(0).agregarControl(new Laboratorio(LocalDate.now().plusWeeks(1), 1d));
-        pacientes.get(0).agregarControl(new Laboratorio(LocalDate.now().plusWeeks(2), 1d));
-        pacientes.get(0).agregarControl(new Laboratorio(LocalDate.now().plusWeeks(3), 1d));
-        pacientes.get(0).agregarControl(new Laboratorio(LocalDate.now().plusWeeks(4), 1d));
-        pacientes.get(0).agregarControl(new Laboratorio(LocalDate.now().plusWeeks(5), 1d));
+        pacientes.get(0).agregarControl(new ControlLaboratorio(LocalDate.now(), 1d));
+        pacientes.get(0).agregarControl(new ControlLaboratorio(LocalDate.now().plusWeeks(1), 1d));
+        pacientes.get(0).agregarControl(new ControlLaboratorio(LocalDate.now().plusWeeks(2), 1d));
+        pacientes.get(0).agregarControl(new ControlLaboratorio(LocalDate.now().plusWeeks(3), 1d));
+        pacientes.get(0).agregarControl(new ControlLaboratorio(LocalDate.now().plusWeeks(4), 1d));
+        pacientes.get(0).agregarControl(new ControlLaboratorio(LocalDate.now().plusWeeks(5), 1d));
 
-        pacientes.get(2).agregarControl(new Laboratorio(LocalDate.now(), 1d));
-        pacientes.get(3).agregarControl(new Laboratorio(LocalDate.now(), 1d));
+        pacientes.get(2).agregarControl(new ControlLaboratorio(LocalDate.now(), 1d));
+        pacientes.get(3).agregarControl(new ControlLaboratorio(LocalDate.now(), 1d));
 
     }
 
     public static List<Paciente> generarControlesParaReportarSintomas(List<Paciente> pacientes) {
-        pacientes.get(0).agregarControl(new Clinico(LocalDate.now(), false));
-        pacientes.get(1).agregarControl(new Clinico(LocalDate.now(), false));
-        pacientes.get(2).agregarControl(new Clinico(LocalDate.now(), false));
-        pacientes.get(3).agregarControl(new Clinico(LocalDate.now(), false));
-        pacientes.get(4).agregarControl(new Clinico(LocalDate.now(), false));
-        pacientes.get(5).agregarControl(new Clinico(LocalDate.now(), true));
-        pacientes.get(6).agregarControl(new Clinico(LocalDate.now(), true));
-        pacientes.get(7).agregarControl(new Clinico(LocalDate.now(), true));
-        pacientes.get(8).agregarControl(new Clinico(LocalDate.now(), true));
-        pacientes.get(9).agregarControl(new Clinico(LocalDate.now(), true));
+        ControlClinico negative = new ControlClinico(LocalDate.now(), false);
+        ControlClinico positive = new ControlClinico(LocalDate.now(), true);
+        for (int i = 0; i < pacientes.size() / 2; i++) {
+            pacientes.get(i).agregarControl(negative);
+        }
+        for (int i = pacientes.size() / 2; i < pacientes.size(); i++) {
+            pacientes.get(i).agregarControl(positive);
+        }
         return pacientes;
     }
 

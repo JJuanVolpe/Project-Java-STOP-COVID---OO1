@@ -1,10 +1,9 @@
 package classes;
 
 import java.time.LocalDate;
-import java.util.List;
 
-public class Laboratorio extends Control<Double>{
-    public Laboratorio(LocalDate fecha, Double dato) {
+public class ControlLaboratorio extends Control<Double>{
+    public ControlLaboratorio(LocalDate fecha, Double dato) {
         super(fecha, dato);
     }
 

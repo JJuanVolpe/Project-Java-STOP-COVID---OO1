@@ -1,29 +1,27 @@
-import classes.Clinico;
+import classes.ControlClinico;
 import classes.Control;
-import classes.Laboratorio;
-import classes.Pcr;
-import org.junit.jupiter.api.Assertions;
+import classes.ControlLaboratorio;
+import classes.ControlPcr;
 import org.testng.annotations.Test;
-
 import java.time.LocalDate;
+import static org.testng.AssertJUnit.*;
 
 public class ControlTest {
-    private Control laboratorio = new Laboratorio(LocalDate.now(), 50d);
-    private Control clinico = new Clinico(LocalDate.now(), true);
-    private Control pcr = new Pcr(LocalDate.now().plusWeeks(1), false);
+    private Control laboratorio = new ControlLaboratorio(LocalDate.now(), 50d);
+    private Control clinico = new ControlClinico(LocalDate.now(), true);
+    private Control pcr = new ControlPcr(LocalDate.now().plusWeeks(1), false);
     @Test
     void testingTimeToAddControls(){
-        Assertions.assertFalse(laboratorio.passedAWeek(clinico.getFecha()));
-        Assertions.assertFalse(clinico.passedAWeek(laboratorio.getFecha()));
-
-        Assertions.assertFalse(pcr.passedAWeek(laboratorio.getFecha()));
-        Assertions.assertTrue(laboratorio.passedAWeek(pcr.getFecha()));
+        assertFalse(laboratorio.passedAWeek(clinico.getFecha()));
+        assertFalse(clinico.passedAWeek(laboratorio.getFecha()));
+        assertFalse(pcr.passedAWeek(laboratorio.getFecha()));
+        assertTrue(laboratorio.passedAWeek(pcr.getFecha()));
     }
     @Test
     void testingLogicByMethods(){
-        Assertions.assertFalse(laboratorio.isPositive());
-        Assertions.assertTrue(clinico.isPositive());
-        Assertions.assertFalse(pcr.isPositive());
-        Assertions.assertTrue(new Pcr(LocalDate.now(), true).isPositive());
+        assertFalse(laboratorio.isPositive());
+        assertTrue(clinico.isPositive());
+        assertFalse(pcr.isPositive());
+        assertTrue(new ControlPcr(LocalDate.now(), true).isPositive());
     }
 }

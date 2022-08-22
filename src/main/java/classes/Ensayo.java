@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 public class Ensayo {
     private Estudio estudio;
-    private Set<Voluntario> voluntarios = new HashSet<>();
+    private Set<Voluntario> voluntarios;
 
 
     public Ensayo(){
@@ -26,7 +26,7 @@ public class Ensayo {
         return voluntarios;
     }
 
-    // Inciso 1: registro de voluntario, hay sobre-carga de metodo para flexibilidad
+    // Inciso 1: registro de voluntario, hay sobrecarga de métodos para mayor flexibilidad
     public void registrarVoluntario(String nombre, String dni, String sexo, int edad, String id){
         if (this.getVoluntarios().stream().map(Voluntario::getId).anyMatch(some -> some.equals(id))) {
             System.out.println("Lo sentimos no se puede agregar el voluntario debido a que existe un id registrado con el mismo numero.");
@@ -35,7 +35,7 @@ public class Ensayo {
         }
     }
     public void registrarVoluntario(Voluntario v){
-        if (this.getVoluntarios().stream().map(Voluntario::getId).anyMatch(some -> some.equals(v.getId()))) {
+        if (this.getVoluntarios().stream().anyMatch(some -> some.equals(v))) {
             System.out.println("Lo sentimos no se puede agregar el voluntario debido a que existe un id registrado con el mismo numero.");
         } else{
             this.getVoluntarios().add(new Voluntario(v.getNombre(), v.getDni(), v.getSexo(), v.getEdad(), v.getId()));
@@ -46,6 +46,7 @@ public class Ensayo {
     public void iniciarEstudio() {
         if (this.getVoluntarios().size() > 1 && this.getVoluntarios().size() % 2 == 0) {
             this.estudio = new Estudio(this.getVoluntarios());
+            this.getVoluntarios().clear();
         } else {
             System.out.println("Insuficientes voluntarios para crear estudio, deben generarse grupos pares");
         }
@@ -57,7 +58,7 @@ public class Ensayo {
             List<Double> stats = SystemAvg.getAvgByAgeAndClinico(this.getEstudio().getAllVoluntarios());
             System.out.println("promedio edades 18-40:" + stats.get(0) +
                                "\npromedio edades 41-60:" + stats.get(1) +
-                               "\npromedio edad > 60:" + stats.get(0));
+                               "\npromedio edad > 60:" + stats.get(2));
         } else {
             System.out.println("No se ha creado estudio todavia");
         }
@@ -69,7 +70,7 @@ public class Ensayo {
             List<Double> stats = SystemAvg.getAvgByAgeAndPcr(this.getEstudio().getAllVoluntarios());
             System.out.println("promedio edades 18-40:" + stats.get(0) +
                                 "\npromedio edades 41-60:" + stats.get(1) +
-                                "\npromedio edad > 60:" + stats.get(0));
+                                "\npromedio edad > 60:" + stats.get(2));
         } else {
             System.out.println("No se ha creado estudio todavia");
         }

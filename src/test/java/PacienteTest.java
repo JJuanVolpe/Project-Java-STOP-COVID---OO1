@@ -1,7 +1,7 @@
-import classes.Clinico;
-import classes.Laboratorio;
+import classes.ControlClinico;
+import classes.ControlLaboratorio;
 import classes.Paciente;
-import classes.Pcr;
+import classes.ControlPcr;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,11 +12,11 @@ public class PacienteTest {
     @Test
     public void realizarControlPaciente(){
         Paciente p = new Paciente("Jose", "M", "12", 20, "0019");
-        p.agregarControl(new Clinico(LocalDate.now(), false));
+        p.agregarControl(new ControlClinico(LocalDate.now(), false));
         Assert.assertTrue(p.noTieneControlesPositivos());
         Assert.assertEquals(1, p.getControles().size());
 
-        p.agregarControl(new Clinico(LocalDate.now().plusWeeks(1), true));
+        p.agregarControl(new ControlClinico(LocalDate.now().plusWeeks(1), true));
         Assert.assertFalse(p.noTieneControlesPositivos());
     }
 
@@ -32,9 +32,9 @@ public class PacienteTest {
     public void hasControlesPositivos(){
         Paciente p = new Paciente("Jose", "M", "12", 20, "0019");
         addLabControls(p);
-        p.agregarControl(new Clinico(LocalDate.now().plusWeeks(0), false));
+        p.agregarControl(new ControlClinico(LocalDate.now().plusWeeks(0), false));
         Assert.assertTrue(p.noTieneControlesPositivos());
-        p.agregarControl(new Clinico(LocalDate.now().plusWeeks(6), true));
+        p.agregarControl(new ControlClinico(LocalDate.now().plusWeeks(6), true));
         Assert.assertFalse(p.noTieneControlesPositivos());
     }
 
@@ -42,18 +42,18 @@ public class PacienteTest {
     public void booleanReturnByControls(){
         Paciente p = new Paciente("Jose", "M", "12", 20, "0019");
         addLabControls(p);
-        p.agregarControl(new Pcr(LocalDate.now().plusWeeks(6), true));
+        p.agregarControl(new ControlPcr(LocalDate.now().plusWeeks(6), true));
         Assert.assertTrue(p.poseePcrPositivo());
         Assert.assertFalse(p.poseeClinicoPositivo());
         Assert.assertTrue(p.poseeControlLaboratorio());
     }
 
     private void addLabControls(Paciente p) {
-        p.agregarControl(new Laboratorio(LocalDate.now(),0d));
-        p.agregarControl(new Laboratorio(LocalDate.now().plusWeeks(1),10d));
-        p.agregarControl(new Laboratorio(LocalDate.now().plusWeeks(2),20d));
-        p.agregarControl(new Laboratorio(LocalDate.now().plusWeeks(3),30d));
-        p.agregarControl(new Laboratorio(LocalDate.now().plusWeeks(4),40d));
-        p.agregarControl(new Laboratorio(LocalDate.now().plusWeeks(5),60d));
+        p.agregarControl(new ControlLaboratorio(LocalDate.now(),0d));
+        p.agregarControl(new ControlLaboratorio(LocalDate.now().plusWeeks(1),10d));
+        p.agregarControl(new ControlLaboratorio(LocalDate.now().plusWeeks(2),20d));
+        p.agregarControl(new ControlLaboratorio(LocalDate.now().plusWeeks(3),30d));
+        p.agregarControl(new ControlLaboratorio(LocalDate.now().plusWeeks(4),40d));
+        p.agregarControl(new ControlLaboratorio(LocalDate.now().plusWeeks(5),60d));
     }
 }

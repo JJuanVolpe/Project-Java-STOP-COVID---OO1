@@ -1,0 +1,5 @@
+Java version:
+Java SE Development Kit 17.0.4.1
+
+junit version used for tests:
+junit-jupiter-5.9.0.jar
