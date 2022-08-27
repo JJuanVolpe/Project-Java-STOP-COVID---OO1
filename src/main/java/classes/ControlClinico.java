@@ -8,10 +8,10 @@ public class ControlClinico extends Control<Boolean>{
         super(fecha, dato);
     }
 
+    protected boolean isClinico(){ return true;}
+
     @Override
     public boolean isPositive() {
         return this.resultado;
     }
-
-    protected boolean isClinico(){ return true;};
 }

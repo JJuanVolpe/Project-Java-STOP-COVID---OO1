@@ -6,13 +6,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 public class Ensayo {
+
     private Estudio estudio;
     private Set<Voluntario> voluntarios;
 
-
     public Ensayo(){
         voluntarios = new HashSet<>();
-    };
+    }
 
     public Ensayo(Set<Voluntario> voluntarios) {
         this.voluntarios = voluntarios;
@@ -34,6 +34,7 @@ public class Ensayo {
             this.getVoluntarios().add(new Voluntario(nombre, dni, sexo, edad, id));
         }
     }
+
     public void registrarVoluntario(Voluntario v){
         if (this.getVoluntarios().stream().anyMatch(some -> some.equals(v))) {
             System.out.println("Lo sentimos no se puede agregar el voluntario debido a que existe un id registrado con el mismo numero.");
@@ -76,7 +77,7 @@ public class Ensayo {
         }
     }
 
-    // Inciso 8: Reportamos promedio de cantidad anticuerpos generados por 3 o 6 semanas
+    // Inciso 8: Reportamos promedio de cantidad anticuerpos generados por 3 o 6 semanas.
     public void reporteGrupoVacuna() {
         if (this.getEstudio() != null) {
             List<Double> stats = SystemAvg.getAvgByWeeks(this.getEstudio().getVacuna());

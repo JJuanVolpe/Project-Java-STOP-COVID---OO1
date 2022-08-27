@@ -5,27 +5,21 @@ import java.time.temporal.ChronoUnit;
 
 public abstract class Control<T> {
 
+    
+    protected T resultado;
+    protected LocalDate fecha;
+    
+    public Control(LocalDate fecha, T dato) {
+        this.fecha = fecha;
+        this.resultado = dato;
+    }
+
     public LocalDate getFecha() {
         return fecha;
     }
 
     public T getResultado() {
         return resultado;
-    }
-
-    protected LocalDate fecha;
-    protected T resultado;
-
-    @Override
-    public String toString() {
-        return "Control:" +
-                "fecha=" + fecha +
-                ", resultado=" + resultado.toString();
-    }
-
-    public Control(LocalDate fecha, T dato) {
-        this.fecha = fecha;
-        this.resultado = dato;
     }
 
     public abstract boolean isPositive();
@@ -37,4 +31,10 @@ public abstract class Control<T> {
         return ChronoUnit.DAYS.between(this.getFecha(), otherDate) >= 7;
     }
 
+    @Override
+    public String toString() {
+        return "Control:" +
+                "fecha=" + fecha +
+                ", resultado=" + resultado.toString();
+    }
 }
