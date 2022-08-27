@@ -47,8 +47,8 @@ public class SystemAvg {
     }
 
 
-    //7. Reporte grupo Vacuna.
-    //Promedio de Control Laboratorio (anticuerpos generados promedio en grupo) y por edad
+    //8. Reporte grupo Vacuna.
+    //Promedio de anticuerpos generados en grupo vacuna (C.L)
     //Utilizamos un parámetro booleano para elegir si mostramos el porcentaje en 3 o 6 semanas
     public static List<Double> getAvgByWeeks(List<Paciente> list) {
         double firstAvgByThreeWeeks = 0;

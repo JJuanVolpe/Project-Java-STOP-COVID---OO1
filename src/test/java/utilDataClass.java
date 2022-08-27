@@ -11,6 +11,9 @@ import java.util.Set;
 public class utilDataClass {
 
 
+    /**
+     * @return
+     */
     public static List<Paciente> getTenPatients(){
         return  new ArrayList(List.of(
                 new Paciente("anibal", "3353121", "T", 18, "00000"),

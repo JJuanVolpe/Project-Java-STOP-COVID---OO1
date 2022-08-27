@@ -6,26 +6,16 @@ import java.util.stream.Stream;
 
 public class Estudio {
 
-
-    private LocalDate fechaInicio;
+    private LocalDate fechaInicio = LocalDate.now();
     private LocalDate fechaInoculacion;
     private List<Paciente> vacuna;
     private List<Paciente> placebo;
-    private List<Paciente> suspendidos; //Mutuamente excluyente de  (Placebo o Vacuna)
+    private List<Paciente> suspendidos = new ArrayList<>(); //Mutuamente excluyente de  (Placebo o Vacuna)
 
-    public Estudio(){
-        this.fechaInicio = LocalDate.now();
-        this.vacuna = new ArrayList<>();
-        this.placebo = new ArrayList<>();
-        this.suspendidos = new ArrayList<>();
-    }
     public Estudio(Set<Voluntario> voluntarios) {
-        this.fechaInicio = LocalDate.now();
-        this.vacuna = new ArrayList<>(voluntarios.size() / 2);
-        this.placebo = new ArrayList<>(voluntarios.size() / 2);
-        this.suspendidos = new ArrayList<>();
         this.generarGrupoPlaceboYVacuna(voluntarios);
     }
+    
     public LocalDate getFechaInoculacion() {
         return fechaInoculacion;
     }
@@ -35,11 +25,12 @@ public class Estudio {
     public List<Paciente> getPlacebo() {
         return placebo;
     }
+
     public List<Paciente> getSuspendidos() {
         return this.suspendidos;
     }
-
-    //Registramos fecha en que se genera la inoculación de ambos grupos, se asume el mismo tiempo para todos
+    
+    // Inciso 3: Registramos fecha de inoculación en ambos grupos, se asume el mismo tiempo para todos
     public void registrarInoculacion() {
         this.fechaInoculacion = LocalDate.now();
     }
@@ -81,13 +72,15 @@ public class Estudio {
             System.out.println("No se encuentra en el grupo vacuna el paciente");
         }
     }
+
     //Inciso 5. Informar resultado de control.
     public void informarResultadoControl() {
         List<Paciente> list =  new ArrayList<>(Stream.concat(this.getPlacebo().stream(), this.getVacuna().stream())
-                                                .toList());
+                                                            .toList());
         list.forEach(p -> System.out.println(p.getLastControlResult()));
         this.suspenderConSintomas(list);
     }
+    
     public List<Paciente> getAllVoluntarios() {
         return Stream.of(this.getVacuna(), this.getPlacebo(), this.getSuspendidos())
                 .flatMap(Collection::stream)

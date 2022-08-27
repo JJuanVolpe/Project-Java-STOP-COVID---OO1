@@ -1,20 +1,19 @@
 package classes;
 
 import java.time.LocalDate;
-import java.util.List;
-
 
 public class ControlPcr extends Control<Boolean>{
+    
     public ControlPcr(LocalDate fecha, Boolean resultado){
         super(fecha, resultado);
     }
 
+    protected boolean isPcr(){
+        return true;
+    };    
+    
     @Override
     public boolean isPositive() {
         return this.resultado;
     }
-    protected boolean isPcr(){
-        return true;
-    };
-
 }
