@@ -9,6 +9,7 @@ import java.time.LocalDate;
 public class EstudioTest {
 
     Estudio estudio = new Estudio(utilDataClass.getTenVoluntarios());
+    
     @Test
     public void testRegistrarInoculacion(){
         assertNull(estudio.getFechaInoculacion());
@@ -21,6 +22,7 @@ public class EstudioTest {
         assertEquals(estudio.getPlacebo().size(), estudio.getVacuna().size());
         assertEquals(10, estudio.getAllVoluntarios().size());
     }
+    
     @Test
     public void hacerControlGrupoPlacebo(){
         estudio.realizarControlGrupoPlacebo(estudio.getPlacebo().get(0), new ControlClinico(LocalDate.now(), true));

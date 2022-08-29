@@ -9,10 +9,10 @@ public class EnsayoTest {
     public void testRegistroDeVoluntario(){
         Ensayo ensayo = new Ensayo();
         assertEquals(0, ensayo.getVoluntarios().size());
-        ensayo.registrarVoluntario(new Voluntario("José", "18210112", "A", 71, "00006"));
+        ensayo.registrarVoluntario(new Voluntario("José", "18210112", "A", 71, "0006"));
         assertEquals(1, ensayo.getVoluntarios().size());  //Control de insercion de Voluntario
 
-        ensayo.registrarVoluntario(new Voluntario("Ariana", "19001912", "M", 91, "00006"));
+        ensayo.registrarVoluntario(new Voluntario("Ariana", "19001912", "M", 91, "0006"));
         assertEquals(1, ensayo.getVoluntarios().size());  //Control de unicidad por id.
     }
 
