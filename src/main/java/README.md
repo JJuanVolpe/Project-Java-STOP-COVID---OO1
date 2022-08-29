@@ -20,11 +20,10 @@ que comparte propiedades con los clínicos, laboratorios y pcr.
 
                     #####################################################
 Cualquier cambio respecto a un diseño más genérico/legible o enfocado a optimización es bien recibido.
-El diseño fué enfocado a una resolución Oriendada a Objetos como un software 
-específico, pero simple, satisfaciendo el problema descripto con un software mantenible.
+Se percibe un diseño posible como resolucion al enunciado descripto y asignado.  
+Trabajo final desarrollado como oportunidad para aprobar la asignatura correspondiente en el Redictado de OO1.
 
 __Name:__ Juan Francisco Volpe Giangiordano
-
 __Legajo:__ 17914/5
 
 */

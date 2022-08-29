@@ -45,17 +45,16 @@ public class StadisticsTest {
     // en tres rangos de edades: 18-40, 41-60 y mayores de 60.
     @Test
     void stadisticsEmpty() {
-        List<Double> arrayByAges = SystemAvg.
-                getAvgByAgeAndClinico(utilDataClass.getTenPatients());  //Nobody have controls
+        List<Double> arrayByAges = SystemAvg.getAvgByAgeAndClinico(utilDataClass.getTenPatients());  //Nobody have controls
         assertEquals(0d, arrayByAges.get(0));
         assertEquals(0d, arrayByAges.get(1));
         assertEquals(0d, arrayByAges.get(2));
 
-        List<Double> arrayBySyntoms  =SystemAvg.getAvgByAgeAndPcr(utilDataClass.getTenPatients());
+        List<Double> arrayBySyntoms = SystemAvg.getAvgByAgeAndPcr(utilDataClass.getTenPatients());
         assertEquals(0d, arrayBySyntoms.get(0));
         assertEquals(0d, arrayBySyntoms.get(1));
 
-        List<Double> arrayByWeeks  =SystemAvg.getAvgByWeeks(utilDataClass.getTenPatients());
+        List<Double> arrayByWeeks = SystemAvg.getAvgByWeeks(utilDataClass.getTenPatients());
         assertEquals(0d, arrayByWeeks.get(0));
         assertEquals(0d, arrayByWeeks.get(1));
     }
