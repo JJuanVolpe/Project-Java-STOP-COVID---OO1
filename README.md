@@ -1,4 +1,4 @@
-# Projects_Java
+# First Project With Unit Tests of POO
 
 
 /* Se genera la satisfacción de casos de uso, aplicando un diseño de software imperativo respecto a los principios de la POO, 
