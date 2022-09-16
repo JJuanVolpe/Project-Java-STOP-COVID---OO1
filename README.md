@@ -1,5 +1,6 @@
 # First Project With Unit Tests of POO
 
+En la carpeta exercise_data se encuentra el diagrama UML, el problema detallado a resolver y los requerimientos para la ejecución del programa :) 
 
 /* Se genera la satisfacción de casos de uso, aplicando un diseño de software imperativo respecto a los principios de la POO, 
 de forma tal que la destribución de comportamientos y responsabilidades entre los objetos sea equitativa o propia del objeto.
