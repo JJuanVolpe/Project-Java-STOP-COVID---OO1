@@ -14,7 +14,7 @@ Estos permiten crear controles por semana, si es que no tienen un control pcr po
 A su vez, Paciente, extiende de la clase Voluntario, y poseen Controles (clase asbtracta "Control"),
 que comparte propiedades con los clínicos, laboratorios y pcr.
 
-                ##################################################################################################################
+                ####################################################################################################
 
 Cualquier cambio respecto a un diseño más genérico/legible o enfocado a optimización es bien recibido. 
 Se percibe un diseño posible como resolucion al enunciado descripto y asignado.
