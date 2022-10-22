@@ -1,8 +1,9 @@
-# First Project With Unit Tests of POO
+# Proyecto elaborado cómo trabajo opcional en la asignatura Orientación a Objetos I. 
 
 En la carpeta exercise_data se encuentra el diagrama UML, el problema detallado a resolver y los requerimientos para la ejecución del programa :) 
 
-/* Se genera la satisfacción de casos de uso, aplicando un diseño de software imperativo respecto a los principios de la POO, 
+/*
+Se genera la satisfacción de casos de uso, aplicando un diseño de software imperativo respecto a los principios de la POO, 
 de forma tal que la destribución de comportamientos y responsabilidades entre los objetos sea equitativa o propia del objeto.
 Generando como resultado un software simple y moldeado a los CU requeridos.
 
@@ -20,6 +21,5 @@ que comparte propiedades con los clínicos, laboratorios y pcr.
 Cualquier cambio respecto a un diseño más genérico/legible o enfocado a optimización es bien recibido. 
 Se percibe un diseño posible como resolucion al enunciado descripto y asignado.
 Trabajo final desarrollado como oportunidad para aprobar la asignatura correspondiente en el Redictado de OO1.
-
 */
 Footer
