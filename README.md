@@ -16,7 +16,7 @@ Los Pacientes por su parte, (ex-Voluntarios) permiten almacenar controles por se
 si es que no tienen un control pcr positivo o ha pasado una semana del último control (si hay más de uno).
 Los Controles se representan cómo una estructura de datos abstracta y genérica, que permite adaptar y generalizar los tipos: Pcr, Clinico y Laboratorio.
 
-                ########################################################################
+                ######################################################################################################
 
 Cualquier cambio respecto a un diseño más genérico/legible o enfocado a optimización es bien recibido. 
 Se percibe un diseño posible como resolucion al enunciado descripto y asignado.
