@@ -18,7 +18,7 @@ ha pasado una semana del último control (si hay más de uno).
 A su vez, Paciente, extiende de la clase Voluntario, y poseen Controles (clase asbtracta "Control"),
 que comparte propiedades con los clínicos, laboratorios y pcr.
 
-                    #####################################################
+                    ###############################################################################################
 Cualquier cambio respecto a un diseño más genérico/legible o enfocado a optimización es bien recibido.
 Se percibe un diseño posible como resolucion al enunciado descripto y asignado.  
 Trabajo final desarrollado como oportunidad para aprobar la asignatura correspondiente en el Redictado de OO1.
