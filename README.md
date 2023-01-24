@@ -1,6 +1,7 @@
-# Proyecto desarrollado en la asignatura Orientación a Objetos I. 
+# Proyecto desarrollado para la asignatura Orientación a Objetos I. 
 
-En la carpeta exercise_data se encuentra el Diagrama UML, el problema detallado a resolver y los requerimientos para la ejecución del programa :) 
+En la carpeta exercise_data se encuentra el Diagrama UML, el problema detallado a resolver y
+los requerimientos para la ejecución del programa :) 
 
 
 Se genera la satisfacción de casos de uso, aplicando un diseño de software imperativo respecto a los principios de la POO, 
