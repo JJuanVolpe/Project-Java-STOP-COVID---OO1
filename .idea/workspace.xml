@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b664e2c-a379-48f8-9ced-e0e451a1f002" name="Changes" comment="changed testng library about tests for -&gt; import static org.junit.jupiter.api.Assertions.*;">
+      <change afterPath="$PROJECT_DIR$/exercise_data/Ejercicio_explicacion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PacienteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PacienteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercise_data/Ejercicio_enunciado.txt" beforeDir="false" afterPath="$PROJECT_DIR$/exercise_data/Ejercicio_enunciado.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +30,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2BdwxniqMGhfBhWzWToQ9fL7WMp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -42,7 +52,7 @@
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/juan/IdeaProjects/OOI-Proyect-StopCovid/src/main/java/exercise_data&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/juan_/Courses/projects/java_projects/Project-Java-STOP-COVID---OO1&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -58,12 +68,24 @@
       <recent name="C:\Users\juan\IdeaProjects\OOI-Proyect-StopCovid\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.&lt;default&gt;">
+  <component name="RunManager" selected="TestNG.ControlTest.testingTimeToAddControls (1)">
     <configuration name="ControlTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="OOI-Proyect-StopCovid" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ControlTest" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControlTest.testingTimeToAddControls (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Project-Java-STOP-COVID---OO1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ControlTest" />
+      <option name="METHOD_NAME" value="testingTimeToAddControls" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -93,17 +115,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VoluntarioTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="OOI-Proyect-StopCovid" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="VoluntarioTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="OOI-Proyect-StopCovid" />
       <option name="PACKAGE_NAME" value="" />
@@ -116,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ControlTest.testingTimeToAddControls (1)" />
         <item itemvalue="TestNG.&lt;default&gt;" />
         <item itemvalue="TestNG.StadisticsTest" />
         <item itemvalue="TestNG.ControlTest" />
         <item itemvalue="TestNG.ControlTest.testingTimeToAddControls" />
-        <item itemvalue="TestNG.VoluntarioTest" />
       </list>
     </recent_temporary>
   </component>
