@@ -29,8 +29,10 @@ En el actual repositorio se encuentra el desarrollo del Frontend, pero la aplica
 - 4. Realizar control. Durante el estudio se pueden practicar tres tipos de controles: Clínico, Laboratorio, PCR. En los tres se registra la fecha y el resultado que arroja. Los resultados posibles son Control Clínico: con o sin síntomas, Control PCR: positivo o negativo y Control Laboratorio: cantidad de anticuerpos (número real de 0 a 100). Los controles se realizan una vez por semana de la siguiente manera:
 
   -a. A cada miembro del grupo Placebo se le realiza un Control Clínico.
-  -b. A cada miembro del grupo Vacuna se le realiza un Control Clínico y un Control Laboratorio
-  -c. A cualquier voluntario (Placebo o Vacuna) que registre un Control Clínico con síntomas, se le practica un Control PCR. El sistema debe verificar que el voluntario está en condiciones de recibir un Control.
+  
+- -b. A cada miembro del grupo Vacuna se le realiza un Control Clínico y un Control Laboratorio
+  
+- -c. A cualquier voluntario (Placebo o Vacuna) que registre un Control Clínico con síntomas, se le practica un Control PCR. El sistema debe verificar que el voluntario está en condiciones de recibir un Control.
 
 
 - 5. Informar resultado de control. A todos los voluntarios se les informa el resultado de su
