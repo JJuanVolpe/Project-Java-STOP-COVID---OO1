@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b664e2c-a379-48f8-9ced-e0e451a1f002" name="Changes" comment="changed testng library about tests for -&gt; import static org.junit.jupiter.api.Assertions.*;">
+    <list default="true" id="6b664e2c-a379-48f8-9ced-e0e451a1f002" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/exercise_data/Ejercicio_explicacion.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
