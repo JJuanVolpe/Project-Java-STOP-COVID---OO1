@@ -9,15 +9,12 @@ para estudios estadísticos.
 El software debe satisfacer los siguientes Casos de Uso y todos los que crea necesario para ello.
 
 
-
 ## Casos de uso breves
 
-En el actual repositorio se encuentra el desarrollo del Frontend, pero la aplicación cuenta con otros componentes de uso común, siendo los siguientes:
 
 - 1. Registro de voluntario. De cada voluntario de los que se registra nombre, dni, sexo, edad y
      se le asigna un identificador de 4 dígitos que no puede repetirse dentro del estudio en el
      que se integra.
-
 
 - 2. Iniciar estudio. Se registra la fecha de inicio y se divide a los voluntarios registrados en dos
      grupos, llamados Vacuna y Placebo con la misma cantidad de integrantes cada uno. La
@@ -33,7 +30,6 @@ En el actual repositorio se encuentra el desarrollo del Frontend, pero la aplica
     -b. A cada miembro del grupo Vacuna se le realiza un Control Clínico y un Control Laboratorio
   
     -c. A cualquier voluntario (Placebo o Vacuna) que registre un Control Clínico con síntomas, se le practica un Control PCR. El sistema debe verificar que el voluntario está en condiciones de recibir un Control.
-
 
 - 5. Informar resultado de control. A todos los voluntarios se les informa el resultado de su
      control. Cuando un voluntario resulta con un Control PCR con resultado positivo, además
