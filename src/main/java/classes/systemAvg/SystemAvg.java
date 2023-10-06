@@ -46,7 +46,6 @@ public class SystemAvg {
         return List.of(avgYoung, avgMedium, avgOld);
     }
 
-
     //8. Reporte grupo Vacuna.
     //Promedio de anticuerpos generados en grupo vacuna (C.L)
     //Utilizamos un parámetro booleano para elegir si mostramos el porcentaje en 3 o 6 semanas
@@ -68,5 +67,4 @@ public class SystemAvg {
 
         return List.of(firstAvgByThreeWeeks, firstAvgBySixWeeks);
     }
-
 }

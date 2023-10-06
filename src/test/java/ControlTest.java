@@ -27,6 +27,5 @@ public class ControlTest {
         assertFalse(pcr.isPositive());
         assertTrue(new ControlPcr(LocalDate.now(), true).isPositive());
         assertTrue(pcr.passedAWeek(LocalDate.now().plusWeeks(2)));
-    
     }
 }

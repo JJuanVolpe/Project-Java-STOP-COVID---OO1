@@ -2,6 +2,7 @@ package classes;
 
 import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.Collector;
 import java.util.stream.Stream;
 
 public class Estudio {
@@ -62,21 +63,20 @@ public class Estudio {
         if (this.getPlacebo().contains(p) && !control.isLaboratorio()){
             p.agregarControl(control);
         } else{
-            System.out.println("No se encuentra en el grupo placebo el paciente o es un control no permitido");
+            System.out.println("No se encuentra paciente en el grupo placebo, o es un control no permitido");
         }
     }
     public void realizarControlGrupoVacuna(Paciente p, Control control) {
         if (this.getVacuna().contains(p)){
             p.agregarControl(control);
         } else{
-            System.out.println("No se encuentra en el grupo vacuna el paciente");
+            System.out.println("No se encuentra el paciente en el grupo vacuna el paciente");
         }
     }
 
     //Inciso 5. Informar resultado de control.
     public void informarResultadoControl() {
-        List<Paciente> list =  new ArrayList<>(Stream.concat(this.getPlacebo().stream(), this.getVacuna().stream())
-                                                            .toList());
+        List<Paciente> list =  new ArrayList<>(Stream.concat(this.getPlacebo().stream(), this.getVacuna().stream()).toList());
         list.forEach(p -> System.out.println(p.getLastControlResult()));
         this.suspenderConSintomas(list);
     }

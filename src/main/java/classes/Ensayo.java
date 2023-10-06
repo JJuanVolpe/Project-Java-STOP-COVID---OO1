@@ -26,15 +26,11 @@ public class Ensayo {
         return voluntarios;
     }
 
-    // Inciso 1: registro de voluntario, hay sobrecarga de métodos para mayor flexibilidad
+    // Inciso 1: registro de voluntario
     public void registrarVoluntario(String nombre, String dni, String sexo, int edad, String id){
-        if (this.getVoluntarios().stream().map(Voluntario::getId).anyMatch(some -> some.equals(id)) && id.length() != 4) {
-            System.out.println("Existe un id registrado con el mismo numero o el id no posee el formato requerido");
-        } else{
-            this.getVoluntarios().add(new Voluntario(nombre, dni, sexo, edad, id));
-        }
+        this.registrarVoluntario(new Voluntario(nombre, dni, sexo, edad, id));
     }
-
+    //Sobrecarga de métodos para mayor flexibilidad
     public void registrarVoluntario(Voluntario v){
         if (this.getVoluntarios().stream().anyMatch(some -> some.equals(v)) && v.getId().length() != 4) {
             System.out.println("Existe un id registrado con el mismo numero o el id no posee el formato requerido");
